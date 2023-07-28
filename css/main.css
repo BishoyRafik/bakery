@@ -1,0 +1,204 @@
+/* general */
+:root{
+    --signColor: rgb(184, 109, 12);
+    --contact: #403D38;
+    --footerColor: #353330;
+    --facebook-blue: #1877f2;
+    --twitter-blue: #1da1f2;
+    --linkedIn-blue:#0a66c2;
+    --google-red:#ea4335;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.color{
+    color: var(--signColor);
+}
+.bg-signature{
+    background-color: var(--signColor);
+}
+/* navbar */
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: var(--signColor);
+}
+
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .active{
+    color: var(--signColor);
+}
+ /* home */
+.home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.coloredBtn{
+    background-color: var(--signColor);
+    border: 1px solid  var(--signColor);
+    color: white;
+}
+.home .container .homebtns .coloredBtn:hover{
+    background-color: white;
+    color: black;
+}
+
+.scroll{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 5px auto;
+    width: 25px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.097);
+    border: 2px solid white;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    animation: scrollAnim 1.5s infinite ease-in-out;
+    -webkit-animation: scrollAnim 1.5s infinite ease-in-out;
+}
+
+.scroll-dot::after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 3px;
+    left: 50%;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+@keyframes scrollAnim {
+    0%{
+        bottom: 15px;
+    }
+    50%{
+        bottom: 45px;
+    }
+    55%{
+        bottom: 15px;
+    }
+    80%{
+        bottom: 30px;
+    }
+    100%{
+        bottom: 15px;
+    }
+}
+
+/* about */
+
+ul li i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+/* conatct */
+.contact{
+    color: white;
+    background-color: var(--contact);
+}
+.contact {
+    font-size: 12px;
+}
+
+.contact .map-block{
+    position: relative;
+}
+
+.contact .with-map{
+    position: absolute;
+    opacity: 0.5;
+    background-image: url(../images/contact-details-map.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+/* footer */
+.footer{
+    background-color: var(--footerColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .social-footer li i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--contact);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.footer .social-footer li .fa-facebook-f:hover{
+    background-color: var(--facebook-blue);
+    color: white;
+}
+.footer .social-footer li .fa-google-plus-g:hover{
+    background-color: var(--google-red);
+    color: white;
+}
+.footer .social-footer li .fa-linkedin-in:hover{
+    background-color: var(--linkedIn-blue);
+    color: white;
+}
+.footer .social-footer li .fa-twitter:hover{
+    background-color: var(--twitter-blue);
+    color: white;
+}
